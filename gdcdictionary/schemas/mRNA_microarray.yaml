@@ -67,6 +67,7 @@ properties:
       - TXT
       - TSV
       - CSV
+      - CEL
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
