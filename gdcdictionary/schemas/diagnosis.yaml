@@ -451,6 +451,10 @@ properties:
     description: "Name of the disease diagnosed for the subject in a specific follow up."
     type: string
 
+  er_status:
+    description: "A flag that indicates whether the subject visited the emergency room."
+    type: boolean
+
   esophagitis_flag:
     description: >
       Flag to indicate whether the subject had esophagitis
