@@ -32,7 +32,7 @@ links:
   - name: submitted_aligned_reads
     backref: mRNA_expressions
     label: derived_from
-    target_type: mRNA_microarray
+    target_type: submitted_aligned_read
     multiplicity: one_to_many
 
 required:
