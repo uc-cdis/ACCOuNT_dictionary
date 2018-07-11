@@ -28,12 +28,13 @@ links:
     label: derived_from
     target_type: mRNA_microarray
     multiplicity: one_to_many
-    required: true
+    required: false
   - name: submitted_aligned_reads_files
     backref: mRNA_expressions
     label: derived_from
     target_type: submitted_aligned_reads
     multiplicity: one_to_many
+    required: false
 
 required:
   - submitter_id
