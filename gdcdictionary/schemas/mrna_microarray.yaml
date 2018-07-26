@@ -1,14 +1,14 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "miRNA_microarray"
-title: miRNA Microarray
+id: "mrna_microarray"
+title: mRNA Microarray
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://acct/bionimbus.org
 category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing raw miRNA microarray intensity.
+  Data file containing raw mRNA microarray intensity.
 additionalProperties: false
 submittable: true
 validators: null
@@ -24,7 +24,7 @@ systemProperties:
 
 links:
   - name: aliquots
-    backref: miRNA_microarrays
+    backref: mrna_microarrays
     label: data_for
     target_type: aliquot
     multiplicity: one_to_one
@@ -46,8 +46,10 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "miRNA_microarray" ]
+  array_platform:
+    description: >
+      Type of the CHIP used for microarray
+    type: string
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
@@ -57,7 +59,7 @@ properties:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
-      - miRNA Expression Quantification
+      - mRNA Expression Quantification
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
@@ -65,11 +67,14 @@ properties:
       - TXT
       - TSV
       - CSV
+      - CEL
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
       - RNA-microarray
+  type:
+    enum: [ "mrna_microarray" ]
 
   aliquots:
     $ref: "_definitions.yaml#/to_many"

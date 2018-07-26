@@ -1,14 +1,14 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "mRNA_microarray"
-title: mRNA Microarray
+id: "mrna_expression"
+title: mRNA Expression
 type: object
-namespace: https://acct/bionimbus.org
+namespace: http://acct.bionimbus.org/
 category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing raw mRNA microarray intensity.
+  Data file containing normalized mRNA expression.
 additionalProperties: false
 submittable: true
 validators: null
@@ -23,12 +23,18 @@ systemProperties:
   - error_type
 
 links:
-  - name: aliquots
-    backref: mRNA_microarrays
-    label: data_for
-    target_type: aliquot
-    multiplicity: one_to_one
-    required: true
+  - name: mrna_microarrays
+    backref: mrna_expressions
+    label: derived_from
+    target_type: mrna_microarray
+    multiplicity: one_to_many
+    required: false
+  - name: submitted_aligned_reads_files
+    backref: mrna_expressions
+    label: derived_from
+    target_type: submitted_aligned_reads
+    multiplicity: one_to_many
+    required: false
 
 required:
   - submitter_id
@@ -46,10 +52,8 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  array_platform:
-    description: >
-      Type of the CHIP used for microarray
-    type: string
+  type:
+    enum: [ "mrna_expression" ]
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
@@ -67,14 +71,23 @@ properties:
       - TXT
       - TSV
       - CSV
-      - CEL
+      - GCT
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
+      - WGS
+      - WXS
+      - Low Pass WGS
+      - Validation
+      - RNA-Seq
+      - miRNA-Seq
+      - Total RNA-Seq
+      - DNA Panel
       - RNA-microarray
-  type:
-    enum: [ "mRNA_microarray" ]
 
-  aliquots:
+  mrna_microarrays:
+    $ref: "_definitions.yaml#/to_many"
+
+  submitted_aligned_reads_files:
     $ref: "_definitions.yaml#/to_many"

@@ -73,6 +73,7 @@ properties:
       - Adenoid
       - Adipose
       - Adrenal
+      - Airway
       - Alveolar Ridge
       - Amniotic Fluid
       - Ampulla Of Vater
@@ -361,10 +362,12 @@ properties:
       - Circulating Tumor Cell (CTC)
       - Derived Cell Line
       - EBV Immortalized
+      - Epithelial Cell
       - Fibroblasts from Bone Marrow Normal
       - Granulocytes
       - Human Original Cells
       - Lymphocytes
+      - Macrophage
       - Mononuclear Cells from Bone Marrow Normal
       - Peripheral Blood Components NOS
       - Peripheral Blood Nucleated Cells
@@ -428,6 +431,7 @@ properties:
       - Biopsy
       - Blood Draw
       - Bone Marrow Aspirate
+      - Bronchoscopy
       - Core Biopsy
       - Cystectomy
       - Endo Rectal Tumor Resection
@@ -447,6 +451,7 @@ properties:
       - Laparoscopic Radical Nephrectomy
       - Laparoscopic Radical Prostatectomy with Robotics
       - Laparoscopic Radical Prostatectomy without Robotics
+      - Lavage
       - Left Hemicolectomy
       - Lobectomy
       - Local Resection (Exoresection; wall resection)

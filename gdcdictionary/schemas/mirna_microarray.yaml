@@ -1,14 +1,14 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "mRNA_expression"
-title: mRNA Expression
+id: "mirna_microarray"
+title: miRNA Microarray
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: http://acct.bionimbus.org/
 category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing normalized mRNA expression.
+  Data file containing raw miRNA microarray intensity.
 additionalProperties: false
 submittable: true
 validators: null
@@ -23,18 +23,12 @@ systemProperties:
   - error_type
 
 links:
-  - name: mRNA_microarrays
-    backref: mRNA_expressions
-    label: derived_from
-    target_type: mRNA_microarray
-    multiplicity: one_to_many
-    required: false
-  - name: submitted_aligned_reads_files
-    backref: mRNA_expressions
-    label: derived_from
-    target_type: submitted_aligned_reads
-    multiplicity: one_to_many
-    required: false
+  - name: aliquots
+    backref: mirna_microarrays
+    label: data_for
+    target_type: aliquot
+    multiplicity: one_to_one
+    required: true
 
 required:
   - submitter_id
@@ -53,7 +47,7 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "mRNA_expression" ]
+    enum: [ "mirna_microarray" ]
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
@@ -63,7 +57,7 @@ properties:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
-      - mRNA Expression Quantification
+      - miRNA Expression Quantification
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
@@ -71,23 +65,11 @@ properties:
       - TXT
       - TSV
       - CSV
-      - GCT
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
-      - WGS
-      - WXS
-      - Low Pass WGS
-      - Validation
-      - RNA-Seq
-      - miRNA-Seq
-      - Total RNA-Seq
-      - DNA Panel
       - RNA-microarray
 
-  mRNA_microarrays:
-    $ref: "_definitions.yaml#/to_many"
-
-  submitted_aligned_reads_files:
+  aliquots:
     $ref: "_definitions.yaml#/to_many"
