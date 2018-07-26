@@ -1,6 +1,6 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "mRNA_microarray"
+id: "mrna_microarray"
 title: mRNA Microarray
 type: object
 namespace: https://acct/bionimbus.org
@@ -24,7 +24,7 @@ systemProperties:
 
 links:
   - name: aliquots
-    backref: mRNA_microarrays
+    backref: mrna_microarrays
     label: data_for
     target_type: aliquot
     multiplicity: one_to_one
@@ -74,7 +74,7 @@ properties:
     enum:
       - RNA-microarray
   type:
-    enum: [ "mRNA_microarray" ]
+    enum: [ "mrna_microarray" ]
 
   aliquots:
     $ref: "_definitions.yaml#/to_many"
