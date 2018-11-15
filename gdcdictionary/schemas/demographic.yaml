@@ -105,7 +105,7 @@ properties:
 
   age_range :
     description: >
-      Range of ages for the subject
+      Range of ages for the subject. This should not include any ages over 90 years.
     type: string
 
   subjects:

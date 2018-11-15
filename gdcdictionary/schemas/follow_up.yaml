@@ -42,8 +42,10 @@ properties:
 
   age_at_visit:
     description: >
-      Age at visit - round to nearest integer
+      Age at visit in years - round to nearest integer
     type: integer
+    maximum: 89
+    minimum: 0
 
   bmi:
     description: "The body mass divided by the square of the body height expressed in units of kg/m^2."
