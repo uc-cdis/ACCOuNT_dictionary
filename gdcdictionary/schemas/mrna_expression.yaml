@@ -23,18 +23,21 @@ systemProperties:
   - error_type
 
 links:
-  - name: mrna_microarrays
-    backref: mrna_expressions
-    label: derived_from
-    target_type: mrna_microarray
-    multiplicity: one_to_many
-    required: false
-  - name: submitted_aligned_reads_files
-    backref: mrna_expressions
-    label: derived_from
-    target_type: submitted_aligned_reads
-    multiplicity: one_to_many
-    required: false
+  - exclusive: false
+    required: true
+    subgroup:
+      - name: mrna_microarrays
+        backref: mrna_expressions
+        label: derived_from
+        target_type: mrna_microarray
+        multiplicity: one_to_many
+        required: false
+      - name: submitted_aligned_reads_files
+        backref: mrna_expressions
+        label: derived_from
+        target_type: submitted_aligned_reads
+        multiplicity: one_to_many
+        required: false
 
 required:
   - submitter_id
