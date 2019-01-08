@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "slide_count"
 title: Slide Count
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://acct.bionimbus.org/
 category: notation
 program: '*'
 project: '*'
