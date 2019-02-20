@@ -1,13 +1,13 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "submitted_unaligned_reads"
-title: Submitted Unaligned Reads
+id: "submitted_snp_array"
+title: Submitted SNP array
 type: object
 namespace: https://acct.bionimbus.org/
 category: data_file
 program: '*'
 project: '*'
-description: "Data file containing unaligned reads that have not been GDC Harmonized."
+description: "DNA array data files contain information on genome-wide SNP and genetic variant for genetic studies."
 additionalProperties: false
 submittable: true
 validators: null
@@ -26,27 +26,24 @@ links:
     required: true
     subgroup:
       - name: core_metadata_collections
-        backref: submitted_unaligned_reads_files
+        backref: submitted_snp_array_files
         label: data_from
         target_type: core_metadata_collection
         multiplicity: many_to_one
         required: false
-      - name: read_groups
-        backref: submitted_unaligned_reads_files
+      - name: aliquots
+        backref: submitted_snp_array_files
         label: data_from
-        target_type: read_group
-        multiplicity: many_to_one
+        target_type: aliquot
+        multiplicity: one_to_one
         required: false
 
 required:
   - submitter_id
   - file_name
-  - file_size
-  - md5sum
   - data_category
   - data_type
   - data_format
-  - experimental_strategy
   - type
 
 uniqueKeys:
@@ -60,36 +57,39 @@ properties:
     term:
       $ref: "_terms.yaml#/data_category"
     enum:
-      - Sequencing Data
-      - Sequencing Reads
-      - Raw Sequencing Data
+      - SNP Array Data
 
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
-    enum: [ "Unaligned Reads" ]
+    enum:
+      - SNP Raw Intensity
 
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
-      - BAM
-      - FASTQ
+      - IDAT
+      - GTC
+      - GCT
+      - CEL
 
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
-      - WGS
-      - WXS
-      - Low Pass WGS
-      - Validation
-      - RNA-Seq
-      - miRNA-Seq
-      - Total RNA-Seq
-      - DNA Panel
+      - SNP Array Genotyping
 
-  read_groups:
+  platform:
+    term:
+      $ref: "_terms.yaml#/platform"
+    enum:
+      - Illumina Infinium HumanExome BeadChip
+      - Illumina OMNI 5M SNP Array
+      - Illumina OMNI 2.5M SNP Array
+      - Affymetrix Genome-Wide Human SNP Array 6.0
+
+  aliquots:
     $ref: "_definitions.yaml#/to_one"
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_many"
