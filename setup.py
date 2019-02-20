@@ -5,8 +5,6 @@ setup(
     version='0.0.0',
     packages=find_packages(),
     install_requires=[
-        'PyYAML==4.2b1',
-        'jsonschema==2.5.1',
         'dictionaryutils',
     ],
     dependency_links=[

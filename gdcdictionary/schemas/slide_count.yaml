@@ -31,6 +31,7 @@ links:
 required:
   - submitter_id
   - slides
+  - type
 
 uniqueKeys:
   - [ id ]
