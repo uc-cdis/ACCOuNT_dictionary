@@ -57,6 +57,9 @@ properties:
   disease_type:
     description: "Name of the disease for the subject."
     type: string
+  arm:
+    description: "A group or subgroup of participants in a clinical trial that receives a specific treatment."
+    type: string
   species:
     description: "Taxonomic species of the subject."
     enum:
