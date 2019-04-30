@@ -35,7 +35,7 @@ uniqueKeys:
 required:
   - submitter_id
   - type
-  - cases
+  - subjects
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
@@ -1015,5 +1015,5 @@ properties:
       Exam 1 (calibrated cr) egfr using ckd-epi equation
     type: number
 
-  cases:
+  subjects:
 $ref: "_definitions.yaml#/to_one"
