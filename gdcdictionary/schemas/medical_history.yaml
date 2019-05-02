@@ -1014,6 +1014,27 @@ properties:
     description: >
       Exam 1 (calibrated cr) egfr using ckd-epi equation
     type: number
+    
+    
+  hypercholesterolemia:
+    description: >
+      Hypercholesterolemia
+    type: boolean
+
+  prior_angioplasty:
+    description: >
+      Prior angioplasty
+    type: boolean
+
+  prior_pci:
+    description: >
+      Prior Percutaneous Coronary Intervention (PCI)
+    type: boolean
+
+  prior_vessel_disease:
+    description: >
+      Prior Vessel Disease with > 50% stenosis.
+    type: boolean
 
   subjects:
     $ref: "_definitions.yaml#/to_one"
