@@ -251,61 +251,49 @@ properties:
       - "ACS and PCI"
       - unknown
       - not reported    
-      
-      
-      
+                 
   indication_for_clopidogrel_treatment_cad:
     description: >
       The clinical condition, Coronary artery disease (CAD), that the patient has for which clopidogrel is prescribed to to reduce the risk of ischemic events.
     enum:
-      - ""
-      - ""
+      - "True"
+      - "False"
       - unknown
       - not reported 
-      
-      
-      
+                 
   indication_for_clopidogrel_treatment_pad:
     description: >
-      The clinical condition, Peripheral arterial disease (PAD), that the patient has for which clopidogrel is prescribed to to reduce the risk of ischemic events.
+      The clinical condition, Peripheral arterial disease (PAD), that the patient has for which Clopidogrel is prescribed to to reduce the risk of ischemic events.
     enum:
-      - ""
-      - ""
+      - "True"
+      - "False"
       - unknown
       - not reported 
-      
-      
-      
-      
+            
   indication_for_clopidogrel_treatment_stroke:
     description: >
-      The clinical condition, Ischemic stroke, that the patient has for which clopidogrel is prescribed to to reduce the risk of ischemic events.
+      The clinical condition, Ischemic stroke, that the patient has for which Clopidogrel is prescribed to to reduce the risk of ischemic events.
     enum:
-      - ""
-      - ""
+      - "True"
+      - "False"
       - unknown
       - not reported 
-      
-      
-      
-      
+                        
   indication_for_clopidogrel_treatment_acs:
     description: >
-      The clinical condition, Acute cornary syndrome (ACS), that the patient has for which clopidogrel is prescribed to to reduce the risk of ischemic events.
+      The clinical condition, Acute cornary syndrome (ACS), that the patient has for which Clopidogrel is prescribed to to reduce the risk of ischemic events.
     enum:
-      - ""
-      - ""
+      - "True"
+      - "False"
       - unknown
       - not reported
-      
-      
-      
+            
   indication_for_clopidogrel_treatment_other:
     description: >
-      A clinical condition, which is not listed in the other indication_for_clopidogrel fields, that the patient has for which clopidogrel is prescribed to to reduce the risk of ischemic events.
+      A clinical condition, which is not listed in the other indication_for_clopidogrel fields, that the patient has for which Clopidogrel is prescribed to to reduce the risk of ischemic events.
     enum:
-      - ""
-      - ""
+      - "True"
+      - "False"
       - unknown
       - not reported
 
