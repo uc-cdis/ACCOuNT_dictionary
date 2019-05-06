@@ -288,7 +288,7 @@ properties:
             
   indication_for_agent_treatment_other:
     description: >
-      A clinical condition, which is not listed in the other indication_for_clopidogrel fields, that the patient has for which the therapeutic agent is prescribed.
+      A clinical condition, which is not listed in the other indication_for_agent_treatment fields, that the patient has for which the therapeutic agent is prescribed.
     enum:
       - "True"
       - "False"
