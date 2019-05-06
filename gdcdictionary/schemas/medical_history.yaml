@@ -1018,27 +1018,50 @@ properties:
   hypercholesterolemia:
     description: >
       Hypercholesterolemia
-    type: boolean
+    enum:
+      - "Yes"
+      - "No"
+      - "Not reported"
+      - "Unknown"
 
   angioplasty:
     description: >
       Prior angioplasty
-    type: boolean
+    enum:
+      - "Yes"
+      - "No"
+      - "Not reported"
+      - "Unknown"
 
   pci:
     description: >
       Prior Percutaneous Coronary Intervention (PCI)
-    type: boolean
+    enum:
+      - "Yes"
+      - "No"
+      - "Not reported"
+      - "Unknown"
     
   cardiogenic_shock_at_pci:
     description: >
       Cardiogenic shock at the time of Prior Percutaneous Coronary Intervention (PCI)
-    type: boolean
+    enum:
+      - "Yes"
+      - "No"
+      - "Not reported"
+      - "Unknown"
 
   vessel_disease:
     description: >
       Prior Vessel Disease with > 50% stenosis.
-    type: boolean
-
+    enum:
+      - "single"
+      - "double"
+      - "triple"
+      - "more"
+      - "Not reported"
+      - "Unknown"
+      
+      
   subjects:
     $ref: "_definitions.yaml#/to_one"
