@@ -241,7 +241,7 @@ properties:
     
   indication_for_PCI:
     description: >
-      The condition of the patient when a percutaneous coronary intervention (PCI) was performed. This is only relevant in patients with CAD.
+      The condition of the patient when a percutaneous coronary intervention (PCI) was performed. This is only relevant in patients with coronary artery disease (CAD).
     enum:
       - "Stable and no PCI"
       - "ACS and no PCI"
