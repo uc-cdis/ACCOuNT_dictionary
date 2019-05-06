@@ -229,15 +229,6 @@ properties:
     description: >
       Range of years the subject has been taken oral contraceptives
     type: string
-
-  follow_ups:
-    $ref: "_definitions.yaml#/to_one"
-
-  diagnoses:
-    $ref: "_definitions.yaml#/to_one"
-
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
     
   indication_for_PCI:
     description: >
@@ -247,59 +238,69 @@ properties:
       - "ACS and no PCI"
       - "Stable and PCI"
       - "ACS and PCI"
-      - unknown
-      - not reported    
+      - "Unknown"
+      - "Not reported"  
                  
   indication_for_agent_treatment_cad:
     description: >
       The clinical condition, Coronary artery disease (CAD), that the patient has for which the therapeutic agent is prescribed.
     enum:
-      - "True"
-      - "False"
-      - unknown
-      - not reported 
+      - "Yes"
+      - "No"
+      - "Unknown"
+      - "Not reported" 
                  
   indication_for_agent_treatment_pad:
     description: >
       The clinical condition, Peripheral arterial disease (PAD), that the patient has for which the therapeutic agent is prescribed.
     enum:
-      - "True"
-      - "False"
-      - unknown
-      - not reported 
+      - "Yes"
+      - "No"
+      - "Unknown"
+      - "Not reported"
             
   indication_for_agent_treatment_stroke:
     description: >
       The clinical condition, Ischemic stroke, that the patient has for which the therapeutic agent is prescribed.
     enum:
-      - "True"
-      - "False"
-      - unknown
-      - not reported 
+      - "Yes"
+      - "No"
+      - "Unknown"
+      - "Not reported"
                         
   indication_for_agent_treatment_acs:
     description: >
       The clinical condition, Acute cornary syndrome (ACS), that the patient has for which the therapeutic agent is prescribed.
     enum:
-      - "True"
-      - "False"
-      - unknown
-      - not reported
+      - "Yes"
+      - "No"
+      - "Unknown"
+      - "Not reported"
             
   indication_for_agent_treatment_other:
     description: >
       A clinical condition, which is not listed in the other indication_for_agent_treatment fields, that the patient has for which the therapeutic agent is prescribed.
     enum:
-      - "True"
-      - "False"
-      - unknown
-      - not reported
-      
+      - "Yes"
+      - "No"
+      - "Unknown"
+      - "Not reported"
       
   verifynow_adp:
     description: >
       The assay result for the VerifyNow ADP stimulated aggregation, while the patient is on a maintenance does of the therapeutic agent. Measured in P2Y12 reaction units (PRU).
     type: number
+
+
+
+  follow_ups:
+    $ref: "_definitions.yaml#/to_one"
+
+  diagnoses:
+    $ref: "_definitions.yaml#/to_one"
+
+  project_id:
+    $ref: "_definitions.yaml#/project_id"
 
 
   # ======== Timestamps ========
