@@ -1030,6 +1030,11 @@ properties:
     description: >
       Prior Percutaneous Coronary Intervention (PCI)
     type: boolean
+    
+  cardiogenic_shock_at_pci:
+    description: >
+      Cardiogenic shock at the time of Prior Percutaneous Coronary Intervention (PCI)
+    type: boolean
 
   prior_vessel_disease:
     description: >
