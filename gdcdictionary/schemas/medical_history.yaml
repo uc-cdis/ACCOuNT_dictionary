@@ -1015,18 +1015,17 @@ properties:
       Exam 1 (calibrated cr) egfr using ckd-epi equation
     type: number
     
-    
   hypercholesterolemia:
     description: >
       Hypercholesterolemia
     type: boolean
 
-  prior_angioplasty:
+  angioplasty:
     description: >
       Prior angioplasty
     type: boolean
 
-  prior_pci:
+  pci:
     description: >
       Prior Percutaneous Coronary Intervention (PCI)
     type: boolean
@@ -1036,7 +1035,7 @@ properties:
       Cardiogenic shock at the time of Prior Percutaneous Coronary Intervention (PCI)
     type: boolean
 
-  prior_vessel_disease:
+  vessel_disease:
     description: >
       Prior Vessel Disease with > 50% stenosis.
     type: boolean
