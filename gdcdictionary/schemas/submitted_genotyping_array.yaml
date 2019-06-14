@@ -83,7 +83,7 @@ properties:
     term:
       $ref: "_terms.yaml#/data_type"
     enum: 
-      - "Methylation Intensity Values"
+      - "Genotyping Intensity Values"
 
   data_format:
     term:
