@@ -1,0 +1,108 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "submitted_genotyping_array"
+title: Submitted Genotyping Array
+type: object
+namespace: https://acct.bionimbus.org/
+category: data_file
+program: '*'
+project: '*'
+description: "TBD"
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+  - file_state
+  - error_type
+
+links:
+  - exclusive: false
+    required: true
+    subgroup:
+      - name: core_metadata_collections
+        backref: submitted_genotyping_array_files
+        label: data_from
+        target_type: core_metadata_collection
+        multiplicity: many_to_one
+        required: false
+      - name: aliquots
+        backref: submitted_genotyping_array_files
+        label: data_from
+        target_type: aliquot
+        multiplicity: many_to_one
+        required: false
+
+required:
+  - submitter_id
+  - file_name
+  - file_size
+  - md5sum
+  - data_category
+  - data_type
+  - data_format
+  - type
+  - channel
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/data_file_properties"
+
+  assay_method:
+    enum:
+      - Genotyping Array
+
+  assay_instrument:
+    description: >
+      Name of the platform used to obtain data. 
+    enum:
+      - Illumina
+
+  assay_instrument_model:
+    description: >
+      Name of the instrument model used to obtain data. 
+    enum:
+      - Illumina Infinium HumanMethylation450
+      - Illumina Infinium HumanMethylation450K
+      - MiSeq
+      - NextSeq 550
+      - HiSeq 4000
+      
+
+  data_category:
+    term:
+      $ref: "_terms.yaml#/data_category"
+    enum:
+      - "Genotyping Data"
+
+  data_type:
+    term:
+      $ref: "_terms.yaml#/data_type"
+    enum: 
+      - "Genotyping Intensity Values"
+
+  data_format:
+    term:
+      $ref: "_terms.yaml#/data_format"
+    enum:
+      - IDAT
+
+  channel:
+    term:
+      $ref: "_terms.yaml#/channel"
+    enum:
+      - "Green"
+      - "Red"
+
+  aliquots:
+    $ref: "_definitions.yaml#/to_one"
+  core_metadata_collections:
+    $ref: "_definitions.yaml#/to_many"
