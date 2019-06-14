@@ -57,7 +57,7 @@ properties:
 
   assay_method:
     enum:
-      - Methylation Array
+      - Genotyping Array
 
   assay_instrument:
     enum:
@@ -72,18 +72,26 @@ properties:
     term:
       $ref: "_terms.yaml#/data_category"
     enum:
-      - Methylation Data
+      - "Genotyping Data"
 
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
-    enum: [ "Methylation Intensity Values" ]
+    enum: 
+      - "Methylation Intensity Values"
 
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
       - IDAT
+
+  channel:
+    term:
+      $ref: "_terms.yaml#/channel"
+    enum:
+      - "Green"
+      - "Red"
 
   aliquots:
     $ref: "_definitions.yaml#/to_one"
