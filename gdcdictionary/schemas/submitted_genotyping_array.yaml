@@ -67,6 +67,8 @@ properties:
       - Illumina
 
   assay_instrument_model:
+    description: >
+      Name of the instrument model used to obtain data. 
     enum:
       - Illumina Infinium HumanMethylation450
       - Illumina Infinium HumanMethylation450K
