@@ -61,6 +61,8 @@ properties:
       - Genotyping Array
 
   assay_instrument:
+    description: >
+      Name of the platform used to obtain data. 
     enum:
       - Illumina
 
