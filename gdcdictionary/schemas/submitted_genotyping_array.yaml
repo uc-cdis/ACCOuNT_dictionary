@@ -1,13 +1,13 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "submitted_methylation"
-title: Submitted Methylation
+id: "submitted_genotyping_array"
+title: Submitted Genotyping Array
 type: object
 namespace: https://acct.bionimbus.org/
 category: data_file
 program: '*'
 project: '*'
-description: "DNA methylation data files contain information on raw and normalized signal intensities, detection confidence and calculated beta values for methylated and unmethylated probes. DNA methylation is an epigenetic mark which can be associated with transcriptional inactivity when located in promoter regions."
+description: "TBD"
 additionalProperties: false
 submittable: true
 validators: null
@@ -26,13 +26,13 @@ links:
     required: true
     subgroup:
       - name: core_metadata_collections
-        backref: submitted_methylation_files
+        backref: submitted_genotyping_array_files
         label: data_from
         target_type: core_metadata_collection
         multiplicity: many_to_one
         required: false
       - name: aliquots
-        backref: submitted_methylation_files
+        backref: submitted_genotyping_array_files
         label: data_from
         target_type: aliquot
         multiplicity: many_to_one
