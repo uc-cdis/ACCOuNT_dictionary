@@ -363,6 +363,10 @@ cea_level_preoperative:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2716510&version=1.0"
 
+channel:
+  description: >
+    The corresponding color channel used to generate this data file.
+
 cigarettes_per_day:
   description: >
     The average number of cigarettes smoked per day.
