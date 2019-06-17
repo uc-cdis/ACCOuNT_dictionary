@@ -7,7 +7,7 @@ namespace: https://acct.bionimbus.org/
 category: data_file
 program: '*'
 project: '*'
-description: "TBD"
+description: ""
 additionalProperties: false
 submittable: true
 validators: null
@@ -70,12 +70,15 @@ properties:
     description: >
       Name of the instrument model used to obtain data. 
     enum:
-      - Illumina Infinium HumanMethylation450
-      - Illumina Infinium HumanMethylation450K
       - MiSeq
       - NextSeq 550
       - HiSeq 4000
       
+  array_chip:
+    description: >
+      Name of the array chip used to obtain data. 
+    enum:
+      - "Infinium Multi-Ethnic Global-8 v1.0 Kit"
 
   data_category:
     term:
