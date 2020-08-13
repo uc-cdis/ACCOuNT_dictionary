@@ -624,7 +624,13 @@ dlco_ref_predictive_percent:
 
 drug_treatment:
   description: >
-    The prescribed/used drugs used for the treatment.
+    The prescribed/used drugs used for the treatment. Text identification of the individual agent(s) used as part of a prior treatment regimen.
+  termDef:
+    term: Prior Therapy Regimen Text 
+    source: caDSR
+    cde_id: 2975232
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2975232&version=1.0"
 
 encoding:
   description: >
