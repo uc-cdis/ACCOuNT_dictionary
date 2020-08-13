@@ -405,7 +405,7 @@ properties:
     term:
       $ref: "_terms.yaml#/drug_treatment"
     enum:
-      - DMSO
+      - DMSO  
       - Omeprazole
       - Phenobarbital
       - Dexamethasone
