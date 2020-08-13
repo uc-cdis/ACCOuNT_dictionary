@@ -401,6 +401,17 @@ properties:
       - "Yes"
       - "No"
       - Unknown
+  drug_treatment:
+    term:
+      $ref: "_terms.yaml#/drug_treatment"
+    enum:
+      - DMSO
+      - Omeprazole
+      - Phenobarbital
+      - Dexamethasone
+      - Carbamazepine
+      - Phenytoin
+      - Rifampicin
   freezing_method:
     term:
       $ref: "_terms.yaml#/freezing_method"
