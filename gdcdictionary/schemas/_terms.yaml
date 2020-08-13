@@ -622,6 +622,10 @@ dlco_ref_predictive_percent:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2180255&version=1.0"
 
+drug_treatment:
+  description: >
+    The prescribed/used drugs used for the treatment.
+
 encoding:
   description: >
     Version of ASCII encoding of quality values found in the file.
