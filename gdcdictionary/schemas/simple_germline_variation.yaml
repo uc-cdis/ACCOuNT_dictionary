@@ -44,7 +44,12 @@ links:
         target_type: submitted_aligned_reads
         multiplicity: many_to_many
         required: false
-
+      - name: aliquots
+        backref: simple_germline_variations
+        label: data_from
+        target_type: aliquot
+        multiplicity: many_to_many
+        required: false
 
 required:
   - type
@@ -88,7 +93,8 @@ properties:
       - Low Pass WGS
       - Validation
          
-
+  aliquots:
+    $ref: "_definitions.yaml#/to_many"
   read_groups:
     $ref: "_definitions.yaml#/to_many"
   submitted_aligned_reads_files:
