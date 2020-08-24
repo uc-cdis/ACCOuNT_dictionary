@@ -47,7 +47,7 @@ links:
       - name: aliquots
         backref: simple_germline_variations
         label: data_from
-        target_type: aliqout
+        target_type: aliquot
         multiplicity: many_to_many
         required: false
 
