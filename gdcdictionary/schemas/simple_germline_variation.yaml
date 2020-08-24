@@ -92,6 +92,7 @@ properties:
       - WXS
       - Low Pass WGS
       - Validation
+      - SNP Array Genotyping
          
   aliquots:
     $ref: "_definitions.yaml#/to_many"
