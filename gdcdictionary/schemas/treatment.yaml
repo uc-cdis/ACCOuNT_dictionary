@@ -308,14 +308,10 @@ properties:
     items:
       type: string
 
-
-
-verifynow_adp:
+  verifynow_adp:
     description: >
       The assay result for the VerifyNow ADP stimulated aggregation, while the patient is on a maintenance dose of the therapeutic agent. Measured in P2Y12 reaction units (PRU).
     type: number
-
-
 
   follow_ups:
     $ref: "_definitions.yaml#/to_one"
