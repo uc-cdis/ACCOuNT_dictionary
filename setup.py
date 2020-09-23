@@ -8,7 +8,7 @@ setup(
         'dictionaryutils',
     ],
     dependency_links=[
-       "git+https://github.com/uc-cdis/dictionaryutils.git#egg=dictionaryutils",
+       "git+https://github.com/uc-cdis/dictionaryutils.git#3.3.0",
     ],
     package_data={
         "gdcdictionary": [
