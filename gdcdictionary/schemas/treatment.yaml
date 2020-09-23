@@ -286,7 +286,31 @@ properties:
       - "Unknown"
       - "Not reported"
       
-  verifynow_adp:
+
+  indication_for_clopidogrel_treatment:
+    description: >
+      Reported indication for treatment with clopidogrel.
+    type: array
+    items:
+      type: string
+
+  indication_for_noac_treatment:
+    description: >
+      Reported indication for treatment with NOAC.
+    type: array
+    items:
+      type: string
+
+  indication_for_warfarin_treatment:
+    description: >
+      Reported indication for treatment with warfarin.
+    type: array
+    items:
+      type: string
+
+
+
+verifynow_adp:
     description: >
       The assay result for the VerifyNow ADP stimulated aggregation, while the patient is on a maintenance dose of the therapeutic agent. Measured in P2Y12 reaction units (PRU).
     type: number
