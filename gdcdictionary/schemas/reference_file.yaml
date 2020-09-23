@@ -102,6 +102,7 @@ properties:
       - ZIP
       - LOG
 
+
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_many"
   projects:
