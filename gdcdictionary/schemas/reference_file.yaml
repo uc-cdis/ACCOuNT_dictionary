@@ -85,6 +85,7 @@ properties:
       - FAI
       - ALT
       - BWT
+      - CSV
       - PAC
       - ANN
       - AMB
@@ -95,6 +96,7 @@ properties:
       - TBI
       - GDS
       - TXT
+      - TSV
       - RDATA
       - AVRO
       - ZIP
