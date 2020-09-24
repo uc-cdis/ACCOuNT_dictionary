@@ -54,6 +54,14 @@ properties:
       - "Yes"
       - "No"
 
+  adverse_events:
+    description: >
+      Has the participant experienced any adverse events (e.g. embolic event, ischemic stroke, STEMI, NSTEMI, MACE, bleeding, cardiac death, unstable angina, stent thrombosis, myocardial infarction, ACS, hemorrhagic stroke, deceased) during follow-up ? 
+    enum:
+      - "No"
+      - "Yes"
+      - "Unknown"
+
   bmi:
     description: "The body mass divided by the square of the body height expressed in units of kg/m^2."
     type: number
