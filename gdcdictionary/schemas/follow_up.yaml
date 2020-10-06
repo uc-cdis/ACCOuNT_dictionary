@@ -54,9 +54,25 @@ properties:
       - "Yes"
       - "No"
 
+  bleeding:
+    description: >
+      Did the patient have an adverse event of bleeding. 
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+
   bmi:
     description: "The body mass divided by the square of the body height expressed in units of kg/m^2."
     type: number
+
+  clotting:
+    description: >
+      Did the patient have an adverse event of clotting. 
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
 
   drug_used:
     description: >
@@ -82,6 +98,14 @@ properties:
   height:
     description: "The height of the patient in centimeters."
     type: number
+
+  mace:
+    description: >
+      Major adverse cardiac events (MACE). MACE is defined as the composite of total death, myocardial infarction, coronary revascularization, stroke, and hospitalization because of heart failure.
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
 
   pregnancy_status:
     description: >
