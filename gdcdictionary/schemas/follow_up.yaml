@@ -54,27 +54,25 @@ properties:
       - "Yes"
       - "No"
 
-  bleeding_score_BARC:
+  bleeding:
     description: >
-      Bleeding Academic Research Consortium (BARC) bleeding score. 
-      Type 0: no bleed. 
-      Type 2: any overt, actionable sign of hemorrhage (eg, more bleeding than would be expected for a clinical circumstance, including bleeding found by imaging alone) that does not fit the criteria for type 3, 4, or 5 but does meet at least one of the following criteria: (1) requiring nonsurgical, medical intervention by a healthcare professional, (2) leading to hospitalization to increase level of care, or (3) prompt evaluation).
-      Type 3a: overt bleeding plus hemoglobin drop of 3 to 5 g/dL* (provided hemoglobin drop is related to bleed); any transfusion with overt bleeding. 
-      Type 3b: overt bleeding plus hemoglobin drop greater than or equal to 5 g/dL* (provided hemoglobin drop is related to bleed); cardiac tamponade; bleeding requiring surgical intervention for control (excluding dental/nasal/skin/hemorrhoid); bleeding requiring intravenous vasoactive agents.
-      Type 3c: intracranial hemorrhage (does not include microbleeds or hemorrhagic transformation; does include intraspinal); subcategories confirmed by autopsy or imaging or lumbar puncture; intraocular bleeding compromising vision. 
-      Type 5: fatal bleed.
+      Did the patient have an adverse event of bleeding. 
     enum:
-      - "Type 0"
-      - "Type 2"
-      - "Type 3a"
-      - "Type 3b"
-      - "Type 3c"
-      - "Type 5"
+      - "Yes"
+      - "No"
       - "Unknown"
 
   bmi:
     description: "The body mass divided by the square of the body height expressed in units of kg/m^2."
     type: number
+
+  clotting:
+    description: >
+      Did the patient have an adverse event of clotting. 
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
 
   drug_used:
     description: >
@@ -84,19 +82,6 @@ properties:
       - "Yes"
       - "Refusal"
       - "Don't know"
-
-  embolic_event:
-    description: >
-      Embolic event. Checked or unchecked.
-      - None 
-      - Stroke (Ischemic, Hemorrhagic or unspecified); sudden focal neurological deficit in the distribution of a single brain artery that persisted beyond 24 hours and was not due to another identifiable cause.
-      - Deep vein thrombosis (DVT)
-      - Pulmonary Embolism (PE)
-      - DVT/PE
-      - Myocardial Infarction; typical symptoms and cardiac biomarker elevation above the upper limit of normal, new pathological Q waves or ST segment elevations in at least 2 contiguous ECG leads, or confirmation at autopsy.
-    type: array
-    items: 
-      type: string
 
   ever_transferred:
     description: >
