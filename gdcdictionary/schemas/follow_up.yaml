@@ -54,14 +54,6 @@ properties:
       - "Yes"
       - "No"
 
-  adverse_events:
-    description: >
-      Has the participant experienced any adverse events (e.g. embolic event, ischemic stroke, STEMI, NSTEMI, MACE, bleeding, cardiac death, unstable angina, stent thrombosis, myocardial infarction, ACS, hemorrhagic stroke, deceased) during follow-up ? 
-    enum:
-      - "No"
-      - "Yes"
-      - "Unknown"
-
   bleeding_score_BARC:
     description: >
       Bleeding Academic Research Consortium (BARC) bleeding score. 
