@@ -108,6 +108,14 @@ properties:
       Range of ages for the subject. This should not include any ages over 90 years.
     type: string
 
+  age:
+    description: >
+      Please give age in either: 
+      - Years (most common) 
+      - Months 
+      - Days
+    type: integer
+
   subjects:
     $ref: "_definitions.yaml#/to_one"
   project_id:
