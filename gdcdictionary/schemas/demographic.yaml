@@ -121,6 +121,7 @@ properties:
     enum:
       - "Yes"
       - "No"
+      - "Unknown"
 
   subjects:
     $ref: "_definitions.yaml#/to_one"
