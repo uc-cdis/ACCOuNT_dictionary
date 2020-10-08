@@ -108,13 +108,19 @@ properties:
       Range of ages for the subject. This should not include any ages over 90 years.
     type: string
 
-  age:
+  age_at_index:
     description: >
-      Please give age in either: 
-      - Years (most common) 
-      - Months 
-      - Days
-    type: integer
+      The subject's age (in years) on the reference or anchor date used during date obfuscation (HARMONIZED). If age is greater than 89 years, see 'age_at_index_gt89'.
+    type: number
+    maximum: 89
+    minimum: 0
+
+  age_at_index_gt89:
+    description: >
+      Indicate whether the subject's age (in years) on the reference or anchor date used during date obfuscation (HARMONIZED) is greater than 89 years.
+    enum:
+      - "Yes"
+      - "No"
 
   subjects:
     $ref: "_definitions.yaml#/to_one"
