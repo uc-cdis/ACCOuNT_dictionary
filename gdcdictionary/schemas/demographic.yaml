@@ -108,6 +108,16 @@ properties:
       Range of ages for the subject. This should not include any ages over 90 years.
     type: string
 
+  education_level :
+    description: >
+      Range of education.
+    enum:
+      - Advanced Degree
+      - Attended Some College/Univ.
+      - College/Univ. Grad
+      - Did Not Complete HS
+      - HS grad/GED
+
   age_at_index:
     description: >
       The subject's age (in years) on the reference or anchor date used during date obfuscation (HARMONIZED). If age is greater than 89 years, see 'age_at_index_gt89'.
